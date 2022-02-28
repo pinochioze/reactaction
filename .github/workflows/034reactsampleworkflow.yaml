@@ -4,7 +4,7 @@ on: push
 
 jobs:
   BuildSourceCode:
-    runs-on: labelrunner
+    runs-on: runner02
     steps:
       - uses: actions/checkout@v2
 
