@@ -10,11 +10,15 @@ jobs:
 
       - name: Use node verson v14.4.0 and npm 6.14.5
         run: |
-          whoami
+          npm -v
           node -v
+          npm install
 #          nvm use 14.4.0
 
       - name: Build 
+        run: npm run-script build
+
+      - name: Deploy to Surge
         run: surge --project ./build --domain disgusted-garden.surge.sh
 
 
